@@ -138,6 +138,7 @@
 .pol-front,.pol-back { backface-visibility:hidden; background:#fff; border-radius:4px; padding:8px 8px 20px; box-shadow:2px 3px 10px rgba(0,0,0,.3); }
 .pol-back { position:absolute; inset:0; transform:rotateY(180deg); display:flex; align-items:center; justify-content:center; padding:12px; }
 .pol-front span { font-size:clamp(28px,6vw,36px); display:block; text-align:center; }
+.pol-img { width:100%; height:clamp(80px,18vw,110px); object-fit:cover; border-radius:2px; display:block; }
 .pol-front p,.pol-back p { font-family:var(--font-hand); font-size:clamp(11px,2.5vw,14px); color:#555; text-align:center; margin-top:6px; }
 
 /* Closing Sequence */
