@@ -6,22 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Birthday Mogli Baba 🐷🎂</title>
   <meta name="description" content="A special birthday surprise for the silliest suar — Mogli Baba 🐷❤️">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles1.css">
+  <link rel="stylesheet" href="styles2.css">
+  <link rel="stylesheet" href="styles3.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 </head>
 
 <body>
 
-  <!-- Custom Cursor -->
   <div id="custom-cursor">🐷</div>
   <div id="mouse-glow"></div>
   <canvas id="confetti-canvas"></canvas>
-
-  <!-- Audio Toggle -->
   <button id="audio-toggle" aria-label="Toggle music">🔇</button>
 
-  <!-- ===== SCENE 1 — PRELOADER ===== -->
+  <!-- PRELOADER -->
   <div id="preloader">
     <div id="candle-container">
       <div class="candle-flame"></div>
@@ -34,151 +32,294 @@
     </div>
   </div>
 
-  <!-- ===== SCENE 2 — HERO ===== -->
-  <section id="scene-hero" class="scene">
-    <canvas id="particles-bg"></canvas>
-    <div id="big-22">22</div>
-    <div id="hero-content">
-      <div id="hero-pig">🐷</div>
-      <h1 class="hero-line hero-line-1">Happy Birthday</h1>
-      <p class="hero-line hero-line-2">to my silliest suar 🐷❤️</p>
-      <div id="hero-badge">22</div>
-    </div>
-    <div class="floating-emojis">
-      <span class="floating-emoji" style="left:10%;top:70%;--dur:7s">🎂</span>
-      <span class="floating-emoji" style="left:85%;top:60%;--dur:9s">🎉</span>
-      <span class="floating-emoji" style="left:20%;top:30%;--dur:11s">✨</span>
-      <span class="floating-emoji" style="left:70%;top:80%;--dur:8s">💫</span>
-      <span class="floating-emoji" style="left:50%;top:20%;--dur:10s">🎈</span>
-      <span class="floating-emoji" style="left:90%;top:40%;--dur:12s">🎊</span>
-    </div>
-    <div id="scroll-indicator">
-      <span>scroll for the truth</span>
-      <span style="font-size:24px">↓</span>
-    </div>
-  </section>
+  <main id="viewport-container">
 
-  <!-- ===== SCENE 3 — ROAST ===== -->
-  <section id="scene-roast" class="scene">
-    <div class="roast-card">
-      <div class="roast-line" data-emoji="😂">I seriously don't know how someone can be <span
-          class="word-highlight">this annoying</span>, <span class="word-highlight">this crazy</span>,</div>
-      <div class="roast-line glow-target" data-emoji="❤️">and <span class="glow-pink-target">still be one of my favorite
-          people</span> at the same time. 😂</div>
-    </div>
-  </section>
+    <!-- SCENE 1 — HERO -->
+    <section id="scene-hero" class="scene active">
+      <canvas id="particles-bg"></canvas>
+      <div id="big-22">22</div>
+      <div id="hero-content">
+        <div id="hero-pig">🐷</div>
+        <h1 class="hero-line hero-line-1">Happy Birthday</h1>
+        <p class="hero-line hero-line-2">to my silliest suar 🐷❤️</p>
+        <div id="hero-badge">22</div>
+      </div>
+      <div class="floating-emojis">
+        <span class="floating-emoji" style="left:10%;top:70%;--dur:7s">🎂</span>
+        <span class="floating-emoji" style="left:85%;top:60%;--dur:9s">🎉</span>
+        <span class="floating-emoji" style="left:20%;top:30%;--dur:11s">✨</span>
+        <span class="floating-emoji" style="left:70%;top:80%;--dur:8s">💫</span>
+        <span class="floating-emoji" style="left:50%;top:20%;--dur:10s">🎈</span>
+      </div>
+      <div class="tap-hint">tap next to begin ✨</div>
+    </section>
 
-  <!-- ===== SCENE 4 — EMOTIONAL ===== -->
-  <section id="scene-emotional" class="scene">
-    <canvas id="starfield"></canvas>
-    <div class="emotional-content">
-      <span class="big-quote">"</span>
-      <div class="emotional-line">We may not have spent years together making memories, but you've still become <span
-          class="underline-anim">one of those people I'm genuinely happy to have<svg viewBox="0 0 300 8">
-            <path d="M0,5 Q75,0 150,5 Q225,10 300,5" />
-          </svg></span> in my life. ❤️</div>
-      <div class="emotional-line">You make people laugh even when they're having a bad day, and that's a <span
-          class="underline-anim">rare gift<svg viewBox="0 0 80 8">
-            <path d="M0,5 Q20,0 40,5 Q60,10 80,5" />
-          </svg></span>.</div>
-      <div class="emotional-line">Beneath all your stupidity and weirdness, you're a genuinely kind person.</div>
-    </div>
-    <div class="floating-hearts">
-      <span class="floating-heart" style="left:10%;font-size:20px;--drift:30px;animation-duration:6s">💕</span>
-      <span class="floating-heart"
-        style="left:30%;font-size:28px;--drift:-20px;animation-duration:8s;animation-delay:1s">🩷</span>
-      <span class="floating-heart"
-        style="left:55%;font-size:16px;--drift:40px;animation-duration:7s;animation-delay:2s">💖</span>
-      <span class="floating-heart"
-        style="left:75%;font-size:24px;--drift:-35px;animation-duration:9s;animation-delay:0.5s">❤️</span>
-      <span class="floating-heart"
-        style="left:90%;font-size:18px;--drift:25px;animation-duration:10s;animation-delay:3s">💗</span>
-    </div>
-    <div class="section-divider">
-      <svg>
-        <line x1="0" y1="1" x2="600" y2="1" />
-      </svg>
-    </div>
-    <div class="roast-line hindi" data-emoji="🙂">(Bs jaada khush mat hooo 🙂)</div>
-  </section>
+    <!-- SCENE 2 — THE ROAST -->
+    <section id="scene-roast" class="scene">
+      <div class="brick-wall"></div>
+      <div class="spotlight"></div>
+      <div class="curtain curtain-left"></div>
+      <div class="curtain curtain-right"></div>
+      <canvas id="smoke-canvas"></canvas>
 
-  <!-- ===== SCENE 5 — CAKE ===== -->
-  <section id="scene-cake" class="scene">
-    <div class="cake-wrapper" id="cake-interactive">
-      <div class="cake">
-        <div class="cake-candles">
-          <div class="mini-candle">
-            <div class="mini-flame" data-lit="true"></div>
+      <div class="neon-sign"><span>The Bhondu Report</span></div>
+
+      <div class="roast-stage">
+        <!-- Mic stand -->
+        <div class="mic-stand" id="mic-stand">
+          <div class="mic-head">🎤</div>
+          <div class="mic-pole"></div>
+          <div class="mic-base"></div>
+        </div>
+
+        <!-- Roast lines container -->
+        <div class="roast-lines-wrap" id="roast-lines-wrap">
+          <div class="roast-line-entry" id="roast-l1" data-type="teleprompter">
+            <span>I seriously don't know how someone can be...</span>
+            <span class="reaction-emoji">🤔</span>
           </div>
-          <div class="mini-candle">
-            <div class="mini-flame" data-lit="true"></div>
+          <div class="roast-line-entry" id="roast-l2" data-type="slam">
+            <span class="slam-word" data-color="#ff4444">this annoying,</span>
+            <span class="buzzer">🔴</span>
           </div>
-          <div class="mini-candle">
-            <div class="mini-flame" data-lit="true"></div>
+          <div class="roast-line-entry" id="roast-l3" data-type="scatter">
+            <span class="scatter-word">this crazy,</span>
+            <span class="reaction-emoji dizzy">💫</span>
           </div>
-          <div class="mini-candle">
-            <div class="mini-flame" data-lit="true"></div>
-          </div>
-          <div class="mini-candle">
-            <div class="mini-flame" data-lit="true"></div>
+          <div class="roast-line-entry" id="roast-l4" data-type="golden">
+            <span class="golden-line">and still be one of the best people in my life at the same time</span>
+            <span class="big-emoji-laugh">😂</span>
           </div>
         </div>
-        <div class="cake-tier cake-tier-3"></div>
-        <div class="cake-tier cake-tier-2"></div>
-        <div class="cake-tier cake-tier-1"></div>
-        <div class="cake-base"></div>
-      </div>
-      <p style="text-align:center;margin-top:16px;font-family:var(--font-hand);color:var(--muted);font-size:14px">tap
-        the candles to blow them out 🌬️</p>
-    </div>
-    <div class="wishes-column">
-      <div class="wish-item">May this year bring you happiness 🌟</div>
-      <div class="wish-item">Success in everything you do 🚀</div>
-      <div class="wish-item">Good health always 💪</div>
-      <div class="wish-item wobble-target">And at least a little bit of common sense (though I know that's asking for
-        too much 😭)</div>
-    </div>
-  </section>
 
-  <!-- ===== SCENE 6 — FOREVER ===== -->
-  <section id="scene-forever" class="scene">
-    <div class="blob-bg">
-      <div class="blob blob-1"></div>
-      <div class="blob blob-2"></div>
-      <div class="blob blob-3"></div>
-    </div>
-    <div class="forever-content">
-      <p class="forever-line">Stay the same <span class="cycle-word" data-colors='["#FFD166","#FF4D9E","#9B72FF"]'
-          data-words='["crazy","caring","lovable"]'>crazy</span>, <span class="cycle-word"
-          data-colors='["#FF4D9E","#9B72FF","#FFD166"]' data-words='["caring","lovable","crazy"]'>caring</span>, <span
-          class="cycle-word" data-colors='["#9B72FF","#FFD166","#FF4D9E"]'
-          data-words='["lovable","crazy","caring"]'>lovable</span> suar that you are.</p>
-      <p class="forever-line" id="kinetic-line"></p>
-      <div class="chat-bubble" id="chat-bubble">
-        <div class="typing-dots" id="typing-indicator"><span></span><span></span><span></span></div>
-        <span id="chat-text" style="display:none">(Bs ab jaada bhav mat badha Lena khud k) 😌😂</span>
+        <!-- Audience laugh row -->
+        <div class="audience-row" id="audience-row">
+          <span>😂</span><span>😂</span><span>😂</span><span>😂</span><span>😂</span>
+        </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ===== SCENE 7 — FINALE ===== -->
-  <section id="scene-finale" class="scene">
-    <canvas id="fireworks-canvas"></canvas>
-    <div class="finale-content">
-      <div id="finale-pig">🐷</div>
-      <div id="finale-text">Happy Birthday MOGLI BABA!</div>
-      <div class="finale-emojis">🎂 🎉 ❤️</div>
-      <div id="finale-ribbon"><svg>
-          <line x1="0" y1="2" x2="600" y2="2" />
-        </svg></div>
-      <div class="finale-buttons">
-        <button class="btn-replay" id="btn-replay">🔄 Replay Finale</button>
+      <!-- Roast Cards -->
+      <div class="roast-cards" id="roast-cards">
+        <div class="roast-stat-card" id="card-annoyance">
+          <div class="card-title">Annoyance Level</div>
+          <div class="progress-track">
+            <div class="progress-fill" id="annoyance-bar"></div>
+          </div>
+          <div class="card-label">97 / 100</div>
+          <div class="card-tooltip">"The 3% is when you're asleep"</div>
+        </div>
+        <div class="roast-stat-card" id="card-crazy">
+          <div class="card-title">Craziness Meter</div>
+          <svg class="gauge-svg" viewBox="0 0 120 70">
+            <path d="M10,65 A50,50 0 0,1 110,65" fill="none" stroke="#333" stroke-width="8" stroke-linecap="round" />
+            <path d="M10,65 A50,50 0 0,1 110,65" fill="none" stroke="url(#gaugeGrad)" stroke-width="8"
+              stroke-linecap="round" class="gauge-fill" stroke-dasharray="157" stroke-dashoffset="157" />
+            <line x1="60" y1="65" x2="60" y2="25" stroke="var(--gold)" stroke-width="3" stroke-linecap="round"
+              class="gauge-needle" transform-origin="60 65" />
+            <defs>
+              <linearGradient id="gaugeGrad">
+                <stop offset="0%" stop-color="#FFD166" />
+                <stop offset="100%" stop-color="#FF4D9E" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="card-label">Clinically Unhinged ✓</div>
+        </div>
+        <div class="roast-stat-card" id="card-fav">
+          <div class="card-title">Favourite Person Rating</div>
+          <div class="stars-row" id="stars-row">
+            <span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
+            <span class="star">⭐</span><span class="star">⭐</span>
+            <span class="star star-6">🌟</span>
+          </div>
+          <div class="card-label">Somehow... still a 6/5 ⭐</div>
+        </div>
       </div>
-      <p class="made-with-love">Made with ❤️ — just for you</p>
-    </div>
-  </section>
+
+      <!-- WhatsApp Hindi bubble -->
+      <div class="whatsapp-bubble" id="whatsapp-bubble">
+        <div class="wa-typing" id="wa-typing"><span></span><span></span><span></span></div>
+        <div class="wa-time">right now</div>
+        <div class="wa-hover-reply" id="wa-hover-reply">I'm watching you 👀</div>
+      </div>
+
+      <!-- Mic drop button -->
+      <button class="mic-drop-btn" id="mic-drop-btn">🎤 MIC DROP</button>
+      <div class="mic-drop-text" id="mic-drop-text">That's all folks. ...for now 😂</div>
+
+      <!-- Transition line -->
+      <div class="roast-transition" id="roast-transition">But underneath all of that<span
+          class="ellipsis-anim">...</span></div>
+    </section>
+
+    <!-- SCENE 3 — EMOTIONAL -->
+    <section id="scene-emotional" class="scene">
+      <canvas id="starfield"></canvas>
+      <div class="emotional-content">
+        <span class="big-quote">"</span>
+        <div class="emotional-line">We may not have spent years together making memories, but you've still become <span
+            class="underline-anim">one of those people I'm genuinely happy to have<svg viewBox="0 0 300 8">
+              <path d="M0,5 Q75,0 150,5 Q225,10 300,5" />
+            </svg></span> in my life. ❤️</div>
+        <div class="emotional-line">You make people laugh even when they're having a bad day, and that's a <span
+            class="underline-anim">rare gift<svg viewBox="0 0 80 8">
+              <path d="M0,5 Q20,0 40,5 Q60,10 80,5" />
+            </svg></span>.</div>
+        <div class="emotional-line">Beneath all your stupidity and weirdness, you're a genuinely kind person.</div>
+      </div>
+      <div class="floating-hearts">
+        <span class="floating-heart" style="left:10%;font-size:20px;--drift:30px;animation-duration:6s">💕</span>
+        <span class="floating-heart"
+          style="left:30%;font-size:28px;--drift:-20px;animation-duration:8s;animation-delay:1s">🩷</span>
+        <span class="floating-heart"
+          style="left:55%;font-size:16px;--drift:40px;animation-duration:7s;animation-delay:2s">💖</span>
+        <span class="floating-heart"
+          style="left:75%;font-size:24px;--drift:-35px;animation-duration:9s;animation-delay:0.5s">❤️</span>
+        <span class="floating-heart"
+          style="left:90%;font-size:18px;--drift:25px;animation-duration:10s;animation-delay:3s">💗</span>
+      </div>
+    </section>
+
+    <!-- SCENE 4 — CAKE & WISHES -->
+    <section id="scene-cake" class="scene">
+      <div class="aurora-bg">
+        <div class="aurora-layer a1"></div>
+        <div class="aurora-layer a2"></div>
+        <div class="aurora-layer a3"></div>
+      </div>
+      <canvas id="fireflies-canvas"></canvas>
+
+      <!-- Breath detector prompt -->
+      <div class="breath-prompt" id="breath-prompt">
+        <p>Close your eyes, think of a wish for her... 🕯️</p>
+        <div class="mic-wave" id="mic-wave">🎙️ <span>Listening for your wish...</span></div>
+        <div class="wish-received" id="wish-received">Wish received! ✨</div>
+      </div>
+
+      <div class="cake-wishes-layout" id="cake-wishes-layout" style="display:none">
+        <!-- Left: The Cake -->
+        <div class="cake-column">
+          <h2 class="cake-title">Blow the Candles! 🎂</h2>
+          <div class="cake-3d" id="cake-3d">
+            <div class="candle-ring" id="candle-ring"></div>
+            <div class="cake-tier ct-top">
+              <div class="frosting-drip" style="left:20%"></div>
+              <div class="frosting-drip" style="left:60%"></div>
+            </div>
+            <div class="cake-tier ct-mid">
+              <div class="berry" style="left:15%"></div>
+              <div class="berry" style="left:45%"></div>
+              <div class="berry" style="left:75%"></div>
+            </div>
+            <div class="cake-tier ct-bot">
+              <div class="frosting-drip fd-brown" style="left:10%"></div>
+              <div class="frosting-drip fd-brown" style="left:40%"></div>
+              <div class="frosting-drip fd-brown" style="left:70%"></div>
+            </div>
+            <div class="cake-plate-3d"></div>
+          </div>
+          <div class="candle-counter" id="candle-counter">10 candles remaining...</div>
+          <button class="blow-all-btn" id="blow-all-btn">🌬️ Blow All</button>
+          <div class="all-blown-banner" id="all-blown-banner" style="display:none">All wishes sent! ✨</div>
+        </div>
+
+        <!-- Right: Wish Cards -->
+        <div class="wishes-column" id="wishes-column">
+          <div class="wish-card wc-1" data-idx="0">
+            <div class="wc-icon">☀️</div>
+            <div class="wc-title">Happiness ✦</div>
+            <p>May every day bring you at least one reason to smile — and knowing you, you'll find twenty.</p>
+          </div>
+          <div class="wish-card wc-2" data-idx="1">
+            <div class="wc-icon">🏆</div>
+            <div class="wc-title">Success ✦</div>
+            <p>May this year be the one where things actually work out the way you deserve.</p>
+            <div class="success-bar">
+              <div class="success-fill"></div><span>Success Loading...</span>
+            </div>
+          </div>
+          <div class="wish-card wc-3" data-idx="2">
+            <div class="wc-icon pulse-heart">💚</div>
+            <div class="wc-title">Good Health ✦</div>
+            <p>May your body be as strong as your ability to get on people's nerves.</p>
+          </div>
+          <div class="wish-card wc-4" data-idx="3">
+            <div class="wc-icon">🧠</div>
+            <div class="wc-title">Common Sense 😭 ✦</div>
+            <p>May this year grant you at least 10% more common sense than last year. Small goals.</p>
+            <div class="sense-bar">
+              <div class="sense-fill"></div><span>Common Sense: Loading... (this may take a while)</span>
+            </div>
+          </div>
+          <div class="wish-card wc-5" data-idx="4">
+            <div class="wc-icon">❤️</div>
+            <div class="wc-title">Love & Laughter ✦</div>
+            <p>May you always be surrounded by people who love your weirdness as much as I somehow do.</p>
+          </div>
+          <div class="wish-card wc-6" data-idx="5">
+            <div class="wc-icon big-star">🌟</div>
+            <div class="wc-title">The Real One ✦</div>
+            <p>And above all — may you always know that you're more loved than you realise, more appreciated than you
+              think, and more special than your annoying self will ever admit.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sticky note Hindi -->
+      <div class="sticky-note" id="sticky-note" style="display:none">
+        <p>(Bs jaada khush mat hooo <span class="flip-emoji" id="flip-smiley-2">🙂</span>)</p>
+        <span class="ps-note">P.S. I mean it</span>
+      </div>
+    </section>
+
+    <!-- SCENE 5 — FOREVER -->
+    <section id="scene-forever" class="scene">
+      <div class="blob-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+      </div>
+      <div class="forever-content">
+        <p class="forever-line">Stay the same <span class="cycle-word" data-colors='["#FFD166","#FF4D9E","#9B72FF"]'
+            data-words='["crazy","caring","lovable"]'>crazy</span>, <span class="cycle-word"
+            data-colors='["#FF4D9E","#9B72FF","#FFD166"]' data-words='["caring","lovable","crazy"]'>caring</span>, <span
+            class="cycle-word" data-colors='["#9B72FF","#FFD166","#FF4D9E"]'
+            data-words='["lovable","crazy","caring"]'>lovable</span> suar that you are.</p>
+        <p class="forever-line" id="kinetic-line"></p>
+        <div class="chat-bubble" id="chat-bubble">
+          <div class="typing-dots" id="typing-indicator"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 6 — GRAND FINALE -->
+    <section id="scene-finale" class="scene">
+      <canvas id="fireworks-canvas"></canvas>
+      <div class="finale-content">
+        <div id="finale-pig">🐷</div>
+        <div id="finale-text">Happy Birthday MOGLI BABA!</div>
+        <div class="finale-emojis">🎂 🎉 ❤️</div>
+        <div id="finale-ribbon"><svg>
+            <line x1="0" y1="2" x2="600" y2="2" />
+          </svg></div>
+        <div class="finale-buttons">
+          <button class="btn-replay" id="btn-replay">🔄 Replay Finale</button>
+        </div>
+        <p class="made-with-love">Made with ❤️ — just for you</p>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="progress-dots">
+    <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+  </div>
+  <button id="btn-prev" class="nav-btn hidden">Back</button>
+  <button id="btn-next" class="nav-btn">Next</button>
 
   <script src="script.js"></script>
+  <script src="script2.js"></script>
 </body>
 
 </html>
