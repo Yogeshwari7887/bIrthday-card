@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="styles1.css">
   <link rel="stylesheet" href="styles2.css">
   <link rel="stylesheet" href="styles3.css">
+  <link rel="stylesheet" href="styles4.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 </head>
 
@@ -272,40 +273,231 @@
       </div>
     </section>
 
-    <!-- SCENE 5 — FOREVER -->
+    <!-- SCENE 5 — THE FOREVER MESSAGE -->
     <section id="scene-forever" class="scene">
-      <div class="blob-bg">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
-      </div>
-      <div class="forever-content">
-        <p class="forever-line">Stay the same <span class="cycle-word" data-colors='["#FFD166","#FF4D9E","#9B72FF"]'
-            data-words='["crazy","caring","lovable"]'>crazy</span>, <span class="cycle-word"
-            data-colors='["#FF4D9E","#9B72FF","#FFD166"]' data-words='["caring","lovable","crazy"]'>caring</span>, <span
-            class="cycle-word" data-colors='["#9B72FF","#FFD166","#FF4D9E"]'
-            data-words='["lovable","crazy","caring"]'>lovable</span> suar that you are.</p>
-        <p class="forever-line" id="kinetic-line"></p>
-        <div class="chat-bubble" id="chat-bubble">
-          <div class="typing-dots" id="typing-indicator"><span></span><span></span><span></span></div>
+      <canvas id="ember-canvas"></canvas>
+      <div class="warm-blob warm-blob-1"></div>
+      <div class="warm-blob warm-blob-2"></div>
+      <div class="paper-noise"></div>
+
+      <!-- Entry label -->
+      <div class="forever-entry-label" id="forever-label">and now, the part I actually mean</div>
+      <div class="forever-rule" id="forever-rule"></div>
+
+      <div class="forever-scroll">
+        <!-- Adjective Spotlight -->
+        <div class="adj-spotlight" id="adj-spotlight">
+          <p class="adj-line">Stay the same
+            <span class="adj-word" data-color="#FFD166" data-emoji="⚡" data-note="(the good kind of crazy)"
+              id="adj-crazy">crazy</span>,
+            <span class="adj-word" data-color="#FF9ECF" data-emoji="🫶" data-note="(you show it without realising)"
+              id="adj-caring">caring</span>,
+            <span class="adj-word" data-color="#C4B5FD" data-emoji="✨" data-note="(even when you're being impossible)"
+              id="adj-lovable">lovable</span>
+            <span class="adj-word" data-color="#FF6EB4" data-emoji="🐷" data-note="(my favourite one)"
+              id="adj-suar">suar</span>
+            that you are.
+          </p>
+          <div class="adj-note" id="adj-note"></div>
         </div>
+
+        <!-- Kinetic Typography -->
+        <div class="kinetic-para" id="kinetic-para"></div>
+
+        <!-- WhatsApp Phone Mockup -->
+        <div class="phone-mockup" id="phone-mockup">
+          <div class="phone-notch"></div>
+          <div class="phone-header">
+            <span class="phone-contact">Bhondu 🐷</span>
+            <span class="online-dot"></span>
+          </div>
+          <div class="phone-chat" id="phone-chat"></div>
+        </div>
+
+        <!-- "Things That Don't Change" Letter -->
+        <div class="vintage-letter" id="vintage-letter">
+          <div class="letter-header">Things that will always be true —</div>
+          <ul class="letter-list">
+            <li><svg class="check-svg" viewBox="0 0 24 24">
+                <path d="M4,12 L10,18 L20,6" fill="none" stroke="#333" stroke-width="2.5" stroke-linecap="round"
+                  stroke-dasharray="30" stroke-dashoffset="30" />
+              </svg>No matter where life takes you, never forget how special you are to the people who know you.</li>
+
+            <li><svg class="check-svg" viewBox="0 0 24 24">
+                <path d="M4,12 L10,18 L20,6" fill="none" stroke="#333" stroke-width="2.5" stroke-linecap="round"
+                  stroke-dasharray="30" stroke-dashoffset="30" />
+              </svg> On difficult days, I hope you remember that you deserve the same kindness you give to others.</li>
+
+            <li><svg class="check-svg" viewBox="0 0 24 24">
+                <path d="M4,12 L10,18 L20,6" fill="none" stroke="#333" stroke-width="2.5" stroke-linecap="round"
+                  stroke-dasharray="30" stroke-dashoffset="30" />
+              </svg> You have a way of making ordinary moments feel a little brighter.</li>
+
+            <li><svg class="check-svg" viewBox="0 0 24 24">
+                <path d="M4,12 L10,18 L20,6" fill="none" stroke="#333" stroke-width="2.5" stroke-linecap="round"
+                  stroke-dasharray="30" stroke-dashoffset="30" />
+              </svg> Even when you're struggling, you carry a strength that inspires the people around you.</li>
+
+            <li><svg class="check-svg" viewBox="0 0 24 24">
+                <path d="M4,12 L10,18 L20,6" fill="none" stroke="#333" stroke-width="2.5" stroke-linecap="round"
+                  stroke-dasharray="30" stroke-dashoffset="30" />
+              </svg> The world is genuinely better because you're in it, and that's something worth celebrating.</li>
+          </ul>
+          <div class="wax-seal">🐷</div>
+        </div>
+
+        <!-- Constellation Closer -->
+        <div class="constellation-closer" id="constellation-closer">
+          <canvas id="constellation-canvas" width="300" height="160"></canvas>
+          <p class="constellation-text">Short time. Real friendship. That's enough.</p>
+        </div>
+
+        <!-- Transition -->
+        <div class="scene-bridge" id="scene-bridge">One last thing...</div>
       </div>
     </section>
 
-    <!-- SCENE 6 — GRAND FINALE -->
+    <!-- SCENE 6 — THE DOOR GATE -->
+    <section id="scene-door" class="scene">
+      <div class="door-text">Something big is behind here</div>
+      <div class="doors-container" id="doors-container">
+        <div class="door door-left">
+          <div class="door-panel"></div>
+          <div class="door-handle"></div>
+        </div>
+        <div class="door door-right">
+          <div class="door-panel"></div>
+          <div class="door-handle"></div>
+        </div>
+      </div>
+      <div class="door-light" id="door-light"></div>
+      <button class="door-open-btn" id="door-open-btn">Open it 🎉</button>
+    </section>
+
+    <!-- SCENE 7 — GRAND FINALE -->
     <section id="scene-finale" class="scene">
       <canvas id="fireworks-canvas"></canvas>
-      <div class="finale-content">
+      <div class="finale-content" id="finale-content">
         <div id="finale-pig">🐷</div>
-        <div id="finale-text">Happy Birthday MOGLI BABA!</div>
+        <div id="finale-text">Happy Birthday BHONDU!</div>
         <div class="finale-emojis">🎂 🎉 ❤️</div>
-        <div id="finale-ribbon"><svg>
-            <line x1="0" y1="2" x2="600" y2="2" />
-          </svg></div>
-        <div class="finale-buttons">
-          <button class="btn-replay" id="btn-replay">🔄 Replay Finale</button>
+
+        <!-- Callback Wall -->
+        <div class="callback-wall" id="callback-wall">
+          <div class="cb-card"><span>🐷</span><small>Where it started</small></div>
+          <div class="cb-card"><span>🎭</span><small>Still unhinged</small></div>
+          <div class="cb-card"><span>💫</span><small>Still true</small></div>
+          <div class="cb-card"><span>🎂</span><small>All wishes sent</small></div>
+          <div class="cb-card"><span class="cb-you">you</span><small>Never forget this</small></div>
+          <div class="cb-card"><span class="cb-clock" id="cb-clock"></span><small>Right now</small></div>
         </div>
-        <p class="made-with-love">Made with ❤️ — just for you</p>
+
+        <!-- Unfolding Letter -->
+        <div class="finale-letter" id="finale-letter">
+          <div class="letter-fold-line"></div>
+          <h3>Happy Birthday once again, BHONDU 🎂🎉❤️</h3>
+          <p class="fl-body">Stay the same crazy, caring, lovable suar that you are.<br>
+            Never stop being yourself —<br>
+            because that's exactly why people love you.</p>
+          <div class="fl-divider"><svg viewBox="0 0 200 2">
+              <line x1="0" y1="1" x2="200" y2="1" stroke="#999" stroke-width="1" stroke-dasharray="200"
+                stroke-dashoffset="200" />
+            </svg></div>
+          <p class="fl-ps">(Bs ab jaada bhav mat badha Lena khud k) 😌😂</p>
+          <div class="fl-seal">🐷</div>
+        </div>
+
+        <!-- Birthday Counter -->
+        <div class="bday-counter" id="bday-counter">
+          <p class="counter-intro">She's been alive for:</p>
+          <div class="counter-nums">
+            <div class="cn"><span id="cnt-years">0</span> years</div>
+            <div class="cn-sep">|</div>
+            <div class="cn"><span id="cnt-months">0</span> months</div>
+            <div class="cn-sep">|</div>
+            <div class="cn"><span id="cnt-days">0</span> days</div>
+          </div>
+          <p class="counter-after">And every single one has led to this moment.</p>
+        </div>
+
+        <!-- Polaroid Wall -->
+        <div class="polaroid-wall" id="polaroid-wall">
+          <div class="polaroid" style="--rot:-5deg" data-back="You didn't have to be this funny. And yet.">
+            <div class="pol-inner">
+              <div class="pol-front"><span>📸</span>
+                <p>The first laugh</p>
+              </div>
+              <div class="pol-back">
+                <p></p>
+              </div>
+            </div>
+          </div>
+          <div class="polaroid" style="--rot:3deg" data-back="Hours disappeared when you were around. Still do.">
+            <div class="pol-inner">
+              <div class="pol-front"><span>📸</span>
+                <p>The stupid conversations</p>
+              </div>
+              <div class="pol-back">
+                <p></p>
+              </div>
+            </div>
+          </div>
+          <div class="polaroid" style="--rot:-3deg" data-back="I wouldn't change a single annoying thing.">
+            <div class="pol-inner">
+              <div class="pol-front"><span>📸</span>
+                <p>Being annoying together</p>
+              </div>
+              <div class="pol-back">
+                <p></p>
+              </div>
+            </div>
+          </div>
+          <div class="polaroid" style="--rot:6deg" data-back="Those are the ones I'll actually remember.">
+            <div class="pol-inner">
+              <div class="pol-front"><span>📸</span>
+                <p>The real talks</p>
+              </div>
+              <div class="pol-back">
+                <p></p>
+              </div>
+            </div>
+          </div>
+          <div class="polaroid" style="--rot:-2deg" data-back="This exact moment. Saved.">
+            <div class="pol-inner">
+              <div class="pol-front"><span>📸</span>
+                <p>Right now</p>
+              </div>
+              <div class="pol-back">
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Closing -->
+        <div class="closing-sequence" id="closing-seq" style="display:none">
+          <div class="closing-spotlight"></div>
+          <div class="closing-pig">🐷</div>
+          <p class="closing-line cl-1">Happy Birthday.</p>
+          <p class="closing-line cl-2">For real this time.</p>
+          <p class="closing-line cl-3">You deserved every single word of this.</p>
+          <p class="closing-heart">❤️</p>
+        </div>
+
+        <!-- Replay -->
+        <div class="replay-vinyl" id="replay-vinyl">
+          <div class="vinyl-dot"></div>
+          <div class="replay-menu" id="replay-menu">
+            <button data-target="1">🎭 Replay the Roast</button>
+            <button data-target="3">🎂 Replay the Wishes</button>
+            <button data-target="2">💫 Replay the Real Part</button>
+            <button data-target="6">🎆 Replay the Finale</button>
+            <button data-target="0">🔄 Start Over</button>
+          </div>
+        </div>
+
+        <!-- Easter egg -->
+        <div class="idle-easter-egg" id="idle-egg">Still here? Good. That means it was worth it. 🐷❤️</div>
       </div>
     </section>
 
@@ -314,12 +506,14 @@
   <div id="progress-dots">
     <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
     <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+    <span class="dot"></span><span class="dot"></span>
   </div>
   <button id="btn-prev" class="nav-btn hidden">Back</button>
   <button id="btn-next" class="nav-btn">Next</button>
 
   <script src="script.js"></script>
   <script src="script2.js"></script>
+  <script src="script3.js"></script>
 </body>
 
 </html>
