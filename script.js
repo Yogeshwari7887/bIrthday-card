@@ -62,7 +62,7 @@ function resizeConfetti() {
   confettiCanvas.height = window.innerHeight;
 }
 function spawnConfetti(x, y, count = 30) {
-  const colors = ['#FF4D9E','#FFD166','#9B72FF','#F5EEF8','#ff6b6b','#48dbfb'];
+  const colors = ['#FF4D9E', '#FFD166', '#9B72FF', '#F5EEF8', '#ff6b6b', '#48dbfb'];
   for (let i = 0; i < count; i++) {
     confettiParticles.push({
       x, y,
@@ -311,7 +311,7 @@ function initParticles() {
       x: Math.random() * w, y: Math.random() * h,
       vx: (Math.random() - 0.5) * 0.5, vy: (Math.random() - 0.5) * 0.5,
       r: Math.random() * 3 + 1,
-      color: ['#FF4D9E','#FFD166','#9B72FF'][Math.floor(Math.random() * 3)],
+      color: ['#FF4D9E', '#FFD166', '#9B72FF'][Math.floor(Math.random() * 3)],
       alpha: Math.random() * 0.5 + 0.2
     });
   }
@@ -383,7 +383,7 @@ function initStarfield() {
 }
 
 // ===== CAKE INTERACTION =====
-(function() {
+(function () {
   const flames = document.querySelectorAll('.mini-flame');
   let blownCount = 0;
   flames.forEach(flame => {
@@ -419,7 +419,7 @@ function initFireworks(canvas) {
   canvas.height = canvas.parentElement.offsetHeight;
   const w = canvas.width, h = canvas.height;
   const rockets = [], sparks = [];
-  const colors = ['#FF4D9E','#FFD166','#9B72FF','#48dbfb','#ff6b6b','#feca57'];
+  const colors = ['#FF4D9E', '#FFD166', '#9B72FF', '#48dbfb', '#ff6b6b', '#feca57'];
 
   for (let i = 0; i < 8; i++) {
     setTimeout(() => {
@@ -560,7 +560,7 @@ function initAudio() {
 
 // ===== KONAMI CODE =====
 function initKonamiCode() {
-  const code = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','KeyB','KeyA'];
+  const code = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
   let pos = 0;
   document.addEventListener('keydown', e => {
     if (e.code === code[pos]) {
@@ -579,7 +579,7 @@ function pigParade() {
   for (let i = 0; i < 20; i++) {
     const pig = document.createElement('div');
     pig.textContent = '🐷';
-    pig.style.cssText = `position:fixed;font-size:40px;left:-50px;top:${100 + Math.random()*400}px;z-index:100000;transition:none;`;
+    pig.style.cssText = `position:fixed;font-size:40px;left:-50px;top:${100 + Math.random() * 400}px;z-index:100000;transition:none;`;
     document.body.appendChild(pig);
     gsap.to(pig, {
       x: window.innerWidth + 100, duration: 3 + Math.random() * 2,
@@ -590,7 +590,7 @@ function pigParade() {
   // Beep sequence
   try {
     const ctx = new AudioContext();
-    [523,659,784,659,523].forEach((f, i) => {
+    [523, 659, 784, 659, 523].forEach((f, i) => {
       setTimeout(() => {
         const o = ctx.createOscillator(), g = ctx.createGain();
         o.frequency.value = f; o.type = 'square';
@@ -599,7 +599,7 @@ function pigParade() {
         o.start(); o.stop(ctx.currentTime + 0.15);
       }, i * 150);
     });
-  } catch(e) {}
+  } catch (e) { }
 }
 
 // ===== MOBILE SHAKE =====
